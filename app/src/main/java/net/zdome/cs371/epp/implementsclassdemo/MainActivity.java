@@ -25,9 +25,21 @@ private Button happyButton;
         happyButton.setOnClickListener(this);
     }
 
-    public void onClick (View v)
+    public void onClick (View button)
     {
+        if (button.getId() == R.id.PanicButton) {
             advise.setTextColor(Color.RED);
             advise.setText("NO!");
+        }
+        else if (button.getId() == R.id.HappyButton)
+        {
+            advise.setTextColor(Color.GREEN);
+            advise.setText("Yes");
+        }
+        else
+        {
+            advise.setTextColor(Color.RED);
+            advise.setText("Error");
+        }
     }
 }
